@@ -1,0 +1,221 @@
+/* 기본 설정 */
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+    color: #333;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+    color: #333;
+}
+
+button{
+    cursor: pointer;
+}
+
+li{
+    list-style: none;
+}
+
+body{
+    background-color: #657493;
+}
+.contents-all{
+    width: 1280px;
+    /* margin: 0 auto; 가로길이를 가지고 있는 블록요소를 가운데정렬하는것 */
+    margin: 0 auto;
+    height: 824px;
+}
+.contents-head{
+    display: flex;
+    /* 요소를 양 끝에 배치하거나 균등한 간격으로 배치한다 */
+    justify-content: space-between;
+    height: 40px;
+    background: #3e475c;
+    color: #fff;
+    line-height: 40px;
+    padding: 0 10px;
+}
+.button-exit{
+    color: #fff;
+    float: right;
+    line-height: 40px;
+    background: transparent;
+    border: none;
+    font-size: 16px;
+}
+.contents-body{
+    display: flex;
+    height: 100%;
+}
+.block-left{
+    flex: 2;
+    background-color: #E1F1FF;
+    padding: 20px;
+}
+.block-text-center{
+    text-align: center;
+}
+.top-blue-circle{
+    background: #0163F4;
+    /* 테두리 둥글게 */
+    border-radius: 25px;
+    padding: 5px;
+    width: 250px;
+    /* 가로길이 있는 요소를 가운데 정렬 */
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 10px;
+    color: #fff;
+    font-size: 25px;
+}
+
+.text-navy-big{
+    color: navy;
+    font-size: 44px;
+    font-weight: 800;
+}
+
+.text-blue-big{
+    color: #0163F4;
+    font-size: 48px;
+    font-weight: 800;
+}
+
+.text-bgcolor{
+    background: #0163F4;
+    color: #fff;
+}
+.text-navy{
+    color: navy;
+    font-size: 28px;
+}
+.text-left{
+    font-size: 20px;
+    margin-top: 50px;
+}
+.container-table{
+    margin-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.item-table{
+    /* border를 쓰면 테두리가 겹치기때문에 이럴땐 outline속성을 사용할 수 있다. */
+    outline: 1px solid #aaa;
+    background: #fff;
+    width: 25%;
+    height: 123px;
+    text-align: center;
+    padding: 3px;
+}
+.text-title{
+    font-size: 18px;
+}
+.square-lightblue{
+    background: #EBF6FF;
+    padding: 5px;
+    margin: 3px;
+}
+.square-lightblue .text-blue{
+    color: #0163F4;
+}
+.square-lightblue .text-small{
+    font-size: 13px;
+}
+.text-bottom{
+    text-align: right;
+    color: #666;
+}
+.block-right{
+    flex: 1;
+    background: #fff;
+    padding: 30px 20px;
+}
+
+.block-right .text-big{
+    color: #555;;
+    margin-bottom: 30px;
+    font-size: 26px;
+}
+
+.block-right .text-small{
+    font-size: 13px;
+    margin-bottom: 30px;
+}
+
+.row-input{
+    margin-top: 10px;
+}
+
+.label-input{
+    display: inline-block;
+    width: 100px;
+}
+
+.textbox-input,
+.birth-input{
+    height: 30px;
+    border: 1px solid #999;
+}
+
+.textbox-input{
+    width: calc(100% - 110px);
+}
+
+.birth-input{
+    width: calc(50% - 62px);
+}
+
+.block-term{
+    border: 1px solid #999;
+    margin-top: 20px;
+    padding: 10px;
+}
+.check-term{
+    text-align: right;
+}
+
+.button-cal{
+    width: 100%;
+    height: 50px;
+    background: #aaa;
+    color: #fff;
+    border: none;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+.list-faq{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.block-list-faq li{
+    font-size: 13px;
+    margin-top: 10px;
+}
+
+.block-button{
+    display: flex;
+    width: 100%;
+    margin-top: 20px;
+    gap: 10px;
+}
+
+.button-border-white{
+    border: 1px solid #aaa;
+    background: #fff;
+    padding: 10px;
+}
+
+.button-longer{
+    width: 60%;
+}
+
+.button-shorter{
+    width: 40%;
+}

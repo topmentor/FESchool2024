@@ -1,0 +1,210 @@
+/* 기본 설정 */
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+    color: #333;
+}
+
+a{
+    text-decoration: none;
+    color: #333;
+}
+
+li{
+    list-style: none;
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+    /* 스크롤을 막음 */
+    overflow: hidden; 
+}
+
+.section-first_page {
+    position: absolute;
+    /* 가로길이를 모니터 크기만큼 */
+    width: 100vw;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    transform: translateX(-100px);
+}
+.block-middle{
+    position: relative;
+    border-bottom: 1px solid #333;
+    width: 1000px;
+    padding-bottom: 120px;
+}
+.image-bottom_coffee{
+    position: absolute;
+    bottom: 0;
+    right: 20px;
+}
+.title-bigger{
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+.text-sub{
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+.input-pw {
+    margin-top: 10px;
+    width: 500px;
+    height: 40px;
+    padding: 3px;
+    font-size: 30px;
+    border: 1px solid #aaa;
+    text-align: center;
+}
+.input-btn-circle {
+    display: block;
+    width: 70px;
+    height: 70px;
+    margin: 30px auto;
+    cursor: pointer;
+    border-radius: 35px;
+    border: 1px solid #ccc;
+    background-image: url(./image/arrow.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.input-btn-circle:hover{
+    background-color: #999;
+}
+
+
+/* 두번째 페이지 만들기 */
+.section-second-page {
+    /* 처음에는 화면에 보이지 않게 하기 위해 display를 none으로 설정한다. */
+    display: none;
+    position: absolute;
+    /* 가로길이를 모니터 크기만큼 */
+    width: 100vw;
+    height: 100%;
+}
+
+.section-second-page .block-side-pattern{
+    /* 고정되어야하므로 fixed */
+    position: fixed;
+    width: 300px;
+    height: 100vh;
+    background-image: url("./image/pattern.png");
+}
+
+.section-second-page .block-contents-container{
+    width: 100%;
+    height: 100%;
+    padding-left: 450px;
+    padding-right: 150px;
+}
+
+.menu-nav{
+    position: fixed;
+    top: 10px;
+    left: 450px;
+}
+
+.menu-nav ul{
+    display: flex;
+    gap: 30px;
+    border: 1px solid #999;
+    padding: 15px 30px;
+    border-radius: 30px;
+    box-shadow: 0 0 10px rgba(100, 100, 100, 0.3);
+}
+
+.section-profile{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    flex-direction: column;
+}
+.section-project,
+.section-introduce{
+    height: 100vh;
+}
+
+
+.block-profile_all{
+    display: flex;
+}
+.image-profile_person{
+    width: 300px;
+}
+
+.block-project_logo .img-logo{
+    width: 150px;
+}
+.block-project_all{
+    display: flex;
+    margin-top: 60px;
+}
+.block-project_text{
+    margin-left: 30px;
+}
+
+.container-project,
+.container-introduce{
+    height: 80vh;
+    padding-top: 12vh;
+    margin-bottom: 1vh;
+    padding-right: 50px;
+    overflow-y: scroll;
+}
+
+/* css 애니매이션 요소 그냥 복붙하세요 */
+/* 어두워지면서 화면 밖으로 밀어냄 */
+@keyframes slideOut {
+    from {
+        opacity: 1;
+        left: 0;
+        background-color: white;
+    }
+    to {
+        opacity: 0.6;
+        left: -100%;
+        background-color: gray;
+    }
+}
+
+/* 화면 안으로 가져옴 */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        left: 100%;
+    }
+    to {
+        opacity: 1;
+        left: 0;
+    }
+}
+@keyframes navIn {
+    from {
+        opacity: 0;
+        left: 80vw;
+    }
+    to {
+        opacity: 1;
+        left: 450px;
+    }
+}
+
+/* 첫번째 섹션에 animate-slide-out을 붙이면 1초동안 해당 애니매이션을 실행시킴 */
+.section-first_page.animate-slide-out {
+    animation: slideOut 1s forwards;
+}
+
+.section-second-page.animate-slide-in {
+    animation: slideIn 1s forwards;
+}
+
+.menu-nav.animate-slide-in{
+    animation: navIn 1s forwards;
+}
