@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UI Elements Example with Bootstrap</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<style>
+    body {
+        background-color: #f4f4f4;
+    }
+
+    .container {
+        background-color: #fff;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .notification {
+        display: none;
+    }
+</style>
+
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">UI Elements Example</h1>
+
+        <div class="section mb-4">
+            <h2>Input Field and Button</h2>
+            <div class="form-group">
+                <input type="text" id="inputField" class="form-control" placeholder="Enter text">
+            </div>
+            <button class="btn btn-primary" onclick="">Show Input Value</button>
+        </div>
+        <br>
+        <br>
+        <br>
+
+        <div class="section mb-4">
+            <h2>Checkbox and Radio Buttons</h2>
+            <div class="form-check">
+                <input type="checkbox" id="checkbox" class="form-check-input">
+                <label class="form-check-label" for="checkbox">Checkbox</label>
+            </div>
+            <div class="form-check">
+                <input type="radio" name="radioGroup" value="Option 1" class="form-check-input" id="radio1">
+                <label class="form-check-label" for="radio1">Option 1</label>
+            </div>
+            <div class="form-check">
+                <input type="radio" name="radioGroup" value="Option 2" class="form-check-input" id="radio2">
+                <label class="form-check-label" for="radio2">Option 2</label>
+            </div>
+        </div>
+
+        <div class="section mb-4">
+            <h2>Dropdown Menu</h2>
+            <div class="form-group">
+                <select id="dropdown" class="form-control">
+                    <option value="Option 1">Option 1</option>
+                    <option value="Option 2">Option 2</option>
+                    <option value="Option 3">Option 3</option>
+                </select>
+            </div>
+        </div>
+        <button class="btn btn-primary mt-2" onclick="">Show Selection Values</button>
+
+        <br>
+        <br>
+        <br>
+        <div class="section mb-4">
+            <h2>Toggle Switch</h2>
+            <div class="custom-control custom-switch">
+                <input type="checkbox" class="custom-control-input" id="toggleSwitch">
+                <label class="custom-control-label" for="toggleSwitch">Toggle this switch element</label>
+            </div>
+        </div>
+        <button class="btn btn-primary" onclick="">Show Toggle</button>
+
+        <br>
+        <br>
+        <br>
+        <div class="section mb-4">
+            <h2>Notification Message</h2>
+            <button class="btn btn-primary" onclick="">Show Notification</button>
+            <div id="notification" class="alert alert-success mt-3" role="alert">This is a notification message</div>
+        </div>
+    </div>
+
+
+    <script>
+
+        
+
+    </script>
+</body>
+
+</html>
