@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <input type="button" id="inputBtn" style="width:100px" value="입력" />
+        <input type="button" id="printAllBtn" style="width:100px" value="전체출력" />
+        <input type="button" id="scoreBtn" style="width:100px" value="성적집계" />
+        <br /><br />
+        <input type="text" id="inputCount" style="width:300px" />
+    </div>
+    <br /><br />
+    <div id="resultText"></div>
+    <script>
+        window.onload = function () {
+            document.getElementById("inputBtn").addEventListener("click", function (event) {
+                scoreInput();
+            });
+            document.getElementById("printAllBtn").addEventListener("click", function (event) {
+                printAll();
+            });
+            document.getElementById("scoreBtn").addEventListener("click", function (event) {
+                viewScore();
+            });
+        };
+        function scoreInput() {
+            console.log("입력하기");
+            document.getElementById("resultText").innerHTML = "입력하기";
+        }
+        function printAll() {
+            console.log("전체출력 하기");
+            document.getElementById("resultText").innerHTML = "전체출력 하기";
+        }
+        function viewScore() {
+            console.log("성적 집계 하기");
+            document.getElementById("resultText").innerHTML = "성적 집계 하기";
+        }
+
+        let score = [];
+
+        function scoreInput() {
+            console.log("입력하기");
+            let student = {};
+            student.name = prompt("이름입력", "");
+            student.kor = Number(prompt("국어입력", 0));
+            student.math = Number(prompt("수학입력", 0));
+            student.eng = Number(prompt("영어입력", 0));
+            student.total = student.kor + student.math + student.eng;
+            student.avg = student.total / 3;
+            score.push(student);
+        }
+
+        function printAll() {
+            console.log("전체출력 하기");
+            let output = JSON.stringify(score);
+            document.getElementById("resultText").innerHTML = output;
+        }
+
+        function viewScore() {
+            let allTotal = 0;
+            let allAvg = 0;
+            let tMath = 0;
+            let tEng = 0;
+            let tKor = 0;
+            let aMath = 0;
+            let aEng = 0;
+            let aKor = 0;
+            for (let sObj of score) {
+                tMath += sObj.math;
+                tEng += sObj.eng;
+                tKor += sObj.kor;
+            }
+            allTotal = tMath + tEng + tKor;
+            allAvg = allTotal / score.length;
+            aMath = tMath / score.length;
+            aEng = tMath / score.length;
+            aMath = tMath / score.length;
+            let output = `수학 총점 : ${tMath}  국어 총점 : ${tKor} 영어 총점 ${tEng}`;
+            output += ` 총총점 : ${allTotal} 총평균 : ${allAvg}`;
+            document.getElementById("resultText").innerHTML = output;
+        }
+
+
+    </script>
+</body>
+
+
+</html>
